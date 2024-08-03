@@ -1,0 +1,22 @@
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+        String s = "Hello, Satwika!";
+        String r = rS(s);
+        System.out.println("The reverse string is : "+r);
+   }
+   public static String rS(String input){
+       char [] ch = input.toCharArray();
+       int left=0;
+       int right=ch.length-1;
+       while(left<right){
+           char temp=ch[left];
+           ch[left]=ch[right];
+           ch[right]=temp;
+           left++;
+           right--;
+       }
+       return new String(ch);
+   }
+}
